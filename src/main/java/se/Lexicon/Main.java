@@ -52,7 +52,14 @@ public class Main {
 
         double number1 = 2, number2 = 16, number3 = 4, res = 0;
         res = number1 + number2 + number3;
-        System.out.println(res/3);
+        System.out.println(res / 3);
+
+        // Task NR. 5
+        // Storage a username and print it whit Hello username.
+
+        System.out.println("Right in your username");
+        String username = "David";
+        System.out.println("Hello!" + username);
 
 
     }
