@@ -1,5 +1,7 @@
 package se.Lexicon;
 
+import java.util.Scanner;
+
 public class Main {
 
     //First task NR 1
@@ -8,7 +10,7 @@ public class Main {
         System.out.println("hello");
         System.out.println("David!");
 
-        // 2 test age and salory.
+        // test of age and salory.
         int age = 20;
         System.out.println("age " + age);
 
@@ -23,6 +25,44 @@ public class Main {
         } else {
             System.out.println("You can't drive the car");
         }
+
+        //task NR. 2 Is it leapyear?
+
+        //Variable definition and assignment
+        int year = 2015;
+        boolean leap = false;
+        Scanner obj = new Scanner(System.in); /* create a object */
+
+        //Remove comments from the bottom lines to take input from the user
+        //System.out.print("Enter a year: ");
+        //year = obj.nextInt();
+
+        //A year divisible by 4 is a leap year
+        if (year % 4 == 0) {
+
+            //It is a centenary year if the value is divisible by 100 with no remainder.
+            if (year % 100 == 0) {
+
+                //Centenary year is a leap year divided by 400
+                if (year % 400 == 0)
+                    leap = true;
+                else
+                    leap = false;
+            }
+
+            // if the year is not century
+            else
+                leap = true;
+        }
+        //The Year is not a leap year
+        else
+            leap = false;
+
+        if (leap)
+            System.out.println(year + " is a leap year.");
+        else
+            System.out.println(year + " is not a leap year.");
+
 
         //task NR.3 ( small calculatior )
         // This is a simpel calculator whit +,-,/,*
@@ -62,9 +102,11 @@ public class Main {
         System.out.println("Hello!" + username);
 
 
+        // Task NR. 6
+        //
+
+
     }
-
-
 }
 
 
