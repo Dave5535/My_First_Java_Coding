@@ -113,6 +113,7 @@ public class Main {
 
         // Task NR. 6
         //a basic calculatior whit custum inputs.
+/*
         System.out.println("Welcome to my app!");
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter number1");
@@ -137,14 +138,24 @@ public class Main {
                 double r = BasicCalculator.devid(t1, t2);
                 System.out.println(r);
 
-
-
         }
-
+*/
 
 
         // Task 7 7. Create a program that converts seconds to hours, minutes and seconds Input seconds: 86399 Expected output: 23:59:59
-
+       // needed to make a input
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input seconds: ");
+       //This is how many seconds the user put in the console
+        int seconds = in.nextInt();
+       // int = to storage the value of Seconds
+        int S = seconds % 60; // calculate how many seconds that don't add upp to a full minute
+        int H = seconds / 60; // seconds to Hour
+        int M = H % 60;       // calculate how many minutes that don't add upp to a full hour
+        H = H / 60;
+        //H=hour,M=minutes,S=second
+        System.out.print( H + ":" + M + ":" + S);
+        System.out.print("\n");
 
 
 
