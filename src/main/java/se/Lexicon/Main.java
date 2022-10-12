@@ -70,7 +70,6 @@ public class Main {
         else
             System.out.println(year + " is not a leap year.");
 
-
         //task NR.3 ( small calculatior )
         // This is a simpel calculator whit +,-,/,*
         // That you as the operatior can youreself make the inputs.
