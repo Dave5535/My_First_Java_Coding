@@ -1,8 +1,9 @@
 package se.Lexicon;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
-
+import java.util.Random;
 
 public class Main {
 
@@ -140,7 +141,7 @@ public class Main {
         }
 */
 
-
+/*
         // Task 7 7. Create a program that converts seconds to hours, minutes and seconds Input seconds: 86399 Expected output: 23:59:59
        // needed to make a input
         Scanner in = new Scanner(System.in);
@@ -155,7 +156,49 @@ public class Main {
         //H=hour,M=minutes,S=second
         System.out.print( H + ":" + M + ":" + S);
         System.out.print("\n");
+*/
 
+        //Write a program that first generates a random number between 1 and 500
+        // and stores it into a variable (see the Random class).
+        // Then let the user make a guess for which number it is.
+        // If the user types the correct number, he should be presented with a message
+        // (including the number of guesses he has made).
+        // If he types a number that is greater or smaller than the given number,
+        // display either “Your guess was too small” or “Your guess was too big”.
+        // The program should keep executing until the user input the correct guess.
+
+
+        Scanner s = new Scanner(System.in);
+
+        //Generate random int value from 1 to 500
+        int min = 1;
+        int max = 500;
+        int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int k = 500;
+        int i,guess;
+        for (i = 0; i < k; i++) {
+            System.out.println("Guess The Random value from " + min + " to " + max + ":");
+
+            int t1 = s.nextInt();
+
+            if (t1 == random_int) {
+                System.out.println("The random number was " + random_int);
+                break;
+            } else {
+
+            }
+            System.out.println("You are wrong! >:)");
+
+            if (t1 <= random_int) {
+                System.out.println("You guess to low " + t1 );
+
+
+            } else {
+                System.out.println("You guess to hige " + t1 );
+
+            }
+            System.out.println("congratulations you guess right good job");
+        }
 
 
     }
