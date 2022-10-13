@@ -103,13 +103,20 @@ public class Main {
         res = number1 + number2 + number3;
         System.out.println(res / 3);
 
-        //Task NR. 5 Storage a username and print it whit Hello username.
+        //Task NR. 5 Create a program that asks user to input his/her name and
+        // store it in a variable instead of having fixed name.
+        // Then print ‘Hello username’ where username is what you got from user as input.
 
+        Scanner scane = new Scanner(System.in);
+         NameStorage Name = new NameStorage();
+        System.out.println("Enter your firstname");
+        String firstname = scane.nextLine();
+        System.out.println("Enter your lastname");
+        String lastname = scane.nextLine();
+Name.firstName = firstname ;
+Name.lastName = lastname ;
 
-        System.out.println("Right in your username");
-        String username = "David";
-        System.out.println("Hello!" + username);
-
+        System.out.println("hello! " + Name.firstName + " "+ Name.lastName);
 
         // Task NR. 6
         //a basic calculatior whit custum inputs.
@@ -143,7 +150,7 @@ public class Main {
 
 /*
         // Task 7 7. Create a program that converts seconds to hours, minutes and seconds Input seconds: 86399 Expected output: 23:59:59
-       // needed to make a input
+       // needed to make an input
         Scanner in = new Scanner(System.in);
         System.out.print("Input seconds: ");
        //This is how many seconds the user put in the console
@@ -167,7 +174,7 @@ public class Main {
         // display either “Your guess was too small” or “Your guess was too big”.
         // The program should keep executing until the user input the correct guess.
 
-
+/*
         Scanner s = new Scanner(System.in);
 
         //Generate random int value from 1 to 500
@@ -200,7 +207,7 @@ public class Main {
             System.out.println("congratulations you guess right good job");
         }
 
-
+*/
     }
 }
 
