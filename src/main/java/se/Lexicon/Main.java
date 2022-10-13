@@ -211,21 +211,26 @@ Name.lastName = lastname ;
 
         // Assignment of the week Calculator
 
-
+// This is the start and loop for the calculator.
         System.out.println("Calculator 2000!");
         Scanner scan = new Scanner(System.in);
+
+        //This is if you want to make the code again after it being conducted.
         boolean toContinue = true;
         while (toContinue) {
 
+            //This is the code that scans the users inout.
             System.out.println("Enter number1");
             double t4 = scan.nextInt();
             System.out.println("Enter number2");
             double t5 = scan.nextInt();
 
+            //This is the meny for what operator you want, located in BasicCalculator
             BasicCalculator.displayMeny();
 
-            char opperation = scan.next().charAt(0);
 
+            // This is the main operator That makes the path of what symbol you chose ( +,-,/,')
+            char opperation = scan.next().charAt(0);
             switch (opperation) {
                 case '+':
                     double resultt = BasicCalculator.addition(t4, t5);
@@ -244,7 +249,7 @@ Name.lastName = lastname ;
                     System.out.println("You entered a invalid  operation calculator");
             }
 
-
+// If you have right input this code is performed and you will get continue or not.
             System.out.println("Do you want to continue? Yes/No");
             Scanner scanen = new Scanner(System.in);
             String QuestionYesNo = scanen.next();
