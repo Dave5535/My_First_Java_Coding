@@ -106,7 +106,7 @@ public class Main {
         //Task NR. 5 Create a program that asks user to input his/her name and
         // store it in a variable instead of having fixed name.
         // Then print ‘Hello username’ where username is what you got from user as input.
-
+/*
         Scanner scane = new Scanner(System.in);
          NameStorage Name = new NameStorage();
         System.out.println("Enter your firstname");
@@ -117,7 +117,7 @@ Name.firstName = firstname ;
 Name.lastName = lastname ;
 
         System.out.println("hello! " + Name.firstName + " "+ Name.lastName);
-
+*/
         // Task NR. 6
         //a basic calculatior whit custum inputs.
 /*
@@ -208,6 +208,57 @@ Name.lastName = lastname ;
         }
 
 */
+
+        // Assignment of the week Calculator
+
+
+        System.out.println("Calculator 2000!");
+        Scanner scan = new Scanner(System.in);
+        boolean toContinue = true;
+        while (toContinue) {
+
+            System.out.println("Enter number1");
+            double t4 = scan.nextInt();
+            System.out.println("Enter number2");
+            double t5 = scan.nextInt();
+
+            BasicCalculator.displayMeny();
+
+            char opperation = scan.next().charAt(0);
+
+            switch (opperation) {
+                case '+':
+                    double resultt = BasicCalculator.addition(t4, t5);
+                    System.out.println(resultt);
+                    break;
+                case '-':
+                    double resu = BasicCalculator.subtraction(t4, t5);
+                    System.out.println(resu);
+                case '*':
+                    double re = BasicCalculator.dulti(t4, t5);
+                    System.out.println(re);
+                case '/':
+                    double r = BasicCalculator.devid(t4, t5);
+                    System.out.println(r);
+                default:
+                    System.out.println("You entered a invalid  operation calculator");
+            }
+
+
+            System.out.println("Do you want to continue? Yes/No");
+            Scanner scanen = new Scanner(System.in);
+            String QuestionYesNo = scanen.next();
+            if (QuestionYesNo.equalsIgnoreCase("no")) {
+                toContinue = false;
+                {
+                    System.out.println("Bye have a nice day!");
+                }
+
+
+            }
+
+        }
+
     }
 }
 
